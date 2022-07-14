@@ -43,6 +43,11 @@ class MoveZeros3TestCase(TestCase):
 
     def test_8_All_Zer0s(self):
         self.assertEqual(move_zeros3(['0', 1, 2, 'zero', 3, 0, 4]), [1, 2, 3, 4, '0', 'zero', 0])
+
+    def test_9_Empty_Nester(self):
+        self.assertEqual(move_zeros3([]), [])
+
+    
                       
 
 
