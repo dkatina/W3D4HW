@@ -18,7 +18,8 @@ def move_zeros3(a_list):
     return list(filter(lambda num: True if num != 0 and num != '0' and num != 'zero' and num != 0.0 else False, a_list))\
         + list(filter(lambda num: True if num == 0 or num == '0' or num == 'zero' or num == 0.0 else False, a_list))      #This one catches ALL zeros 
 
-        #Floats don't matter in the test, but MZ3 Gets them fellas all the same
+        #Floats don't matter in the test, but they matter to me
+        #Those decimal point dingos get chucked to the back of the line all the same
 
 print(move_zeros3([1,2,0.0,3,0,4]))
 

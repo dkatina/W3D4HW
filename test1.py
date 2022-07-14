@@ -12,11 +12,14 @@ class MoveZerosTestCase(TestCase):
     def test_3_starting_with_0(self):
         self.assertEqual(move_zeros([0, 1, 2, 0, 3, 0, 4]), [1, 2, 3, 4, 0, 0, 0])
 
-    def test_3_ending_with_0(self):
+    def test_4_ending_with_0(self):
         self.assertEqual(move_zeros([0, 1, 2, 0, 3, 0, 4, 0, 0]), [1, 2, 3, 4, 0, 0, 0, 0, 0])
 
-    def test_3_starting_with_0(self):
+    def test_5_starting_with_0(self):
         self.assertEqual(move_zeros([0, 1, 2, 00, 3, 0, 4]), [1, 2, 3, 4, 0, 00, 0]) 
+
+    def test_6_with_other_types(self):
+        self.assertEqual(move_zeros([0, 1, 2, 'not a zero', 3, 0, 4]), [1, 2, 'not a zero', 3, 4, 0, 0])  
 
 class MoveZeros3TestCase(TestCase):
 
@@ -46,6 +49,9 @@ class MoveZeros3TestCase(TestCase):
 
     def test_9_Empty_Nester(self):
         self.assertEqual(move_zeros3([]), [])
+
+    def test_10_with_other_types(self):
+        self.assertEqual(move_zeros3([0, 1, 2, 'not a zero', 3, 0, 4]), [1, 2, 'not a zero', 3, 4, 0, 0])  
 
     
                       
